@@ -1,4 +1,6 @@
-///The bridge gets renamed after init
+/// Not an area but links the z levels together.
+/obj/abstract/map_data/archon
+	height	= 3
 
 /area/station
 	secure = TRUE
@@ -7,6 +9,7 @@
 /area/station/command
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
+///The bridge gets renamed after init for holopad simplicity.
 /area/station/command/bridge
 	name = "\improper Bridge"
 	icon_state = "bridge"
