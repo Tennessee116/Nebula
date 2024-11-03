@@ -1,11 +1,3 @@
-/// Not an area but links the z levels together.
-/obj/abstract/map_data/archon
-	height	= 3
-
-/area/station
-	secure = TRUE
-	holomap_color = HOLOMAP_AREACOLOR_CREW
-
 /area/station/command
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 

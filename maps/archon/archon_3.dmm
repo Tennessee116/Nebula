@@ -423,7 +423,7 @@
 /area/space)
 "eE" = (
 /obj/machinery/door/airlock/civilian,
-/turf/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_ridged,
 /area/space)
 "eF" = (
 /obj/structure/bed/chair/padded/blue,
@@ -782,6 +782,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning/fulltile,
+/obj/machinery/door/airlock/external/bolted,
 /turf/floor/tiled/techfloor,
 /area/space)
 "hA" = (
@@ -1147,7 +1148,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/command,
-/turf/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_ridged,
 /area/space)
 "ls" = (
 /obj/machinery/door/firedoor/autoset,
@@ -1161,7 +1162,7 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/turf/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_ridged,
 /area/space)
 "lv" = (
 /obj/structure/railing/mapped{
@@ -1890,6 +1891,11 @@
 	},
 /turf/floor/tiled,
 /area/space)
+"sR" = (
+/obj/structure/catwalk,
+/obj/machinery/door/airlock/external/bolted,
+/turf/floor/plating,
+/area/space)
 "sV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -2182,6 +2188,10 @@
 	dir = 1
 	},
 /turf/floor/tiled/techfloor,
+/area/space)
+"vB" = (
+/obj/machinery/door/airlock/hatch/maintenance,
+/turf/floor/tiled/steel_ridged,
 /area/space)
 "vC" = (
 /obj/structure/catwalk,
@@ -3219,7 +3229,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/autoset,
-/turf/floor/tiled/steel_grid,
+/obj/machinery/door/airlock/hatch/maintenance,
+/turf/floor/tiled/steel_ridged,
 /area/space)
 "FU" = (
 /obj/effect/floor_decal/corner_techfloor_gray,
@@ -4025,7 +4036,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/glass/command,
-/turf/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_ridged,
 /area/space)
 "NA" = (
 /obj/structure/lattice,
@@ -4215,7 +4226,7 @@
 "PF" = (
 /obj/machinery/door/firedoor/autoset,
 /obj/effect/floor_decal/industrial/warning/fulltile,
-/turf/floor/tiled/techfloor,
+/turf/floor/tiled/steel_ridged,
 /area/space)
 "PG" = (
 /obj/effect/floor_decal/corner/blue{
@@ -4772,6 +4783,11 @@
 /obj/item/clothing/webbing/drop_pouches/brown,
 /turf/floor/tiled/techfloor,
 /area/space)
+"UO" = (
+/obj/effect/floor_decal/industrial/warning/fulltile,
+/obj/machinery/door/airlock/external/bolted,
+/turf/floor/tiled/techfloor,
+/area/space)
 "UP" = (
 /obj/structure/bed/chair/padded/blue{
 	dir = 8
@@ -4809,7 +4825,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/glass/command,
-/turf/floor/tiled/steel_grid,
+/turf/floor/tiled/steel_ridged,
 /area/space)
 "Vp" = (
 /obj/structure/catwalk,
@@ -4827,11 +4843,11 @@
 /turf/open,
 /area/space)
 "VG" = (
-/obj/effect/floor_decal/industrial/warning/fulltile,
 /obj/machinery/door/firedoor/autoset{
 	dir = 4
 	},
-/turf/floor/tiled/techfloor,
+/obj/machinery/door/airlock/hatch/maintenance,
+/turf/floor/tiled/steel_ridged,
 /area/space)
 "VI" = (
 /obj/structure/bed/chair/armchair/brown{
@@ -25974,7 +25990,7 @@ wx
 wx
 wx
 aF
-Nm
+Uc
 LD
 aF
 aF
@@ -26971,10 +26987,10 @@ WZ
 WZ
 WZ
 WZ
-Tl
+VK
 WZ
 yg
-Nm
+Uc
 yg
 yg
 WZ
@@ -27370,10 +27386,10 @@ jM
 jM
 jM
 oZ
+sR
 uM
 uM
-uM
-uM
+sR
 uM
 uM
 WZ
@@ -27584,7 +27600,7 @@ tz
 sA
 Ow
 wY
-Tl
+VK
 wY
 Oj
 FQ
@@ -27795,7 +27811,7 @@ WZ
 WZ
 WZ
 WZ
-Tl
+vB
 WZ
 WZ
 WZ
@@ -27803,7 +27819,7 @@ VG
 WZ
 WZ
 WZ
-VG
+Uc
 WZ
 WZ
 WZ
@@ -28430,7 +28446,7 @@ WX
 ZO
 WZ
 WZ
-Nm
+Uc
 WZ
 WZ
 WZ
@@ -28832,7 +28848,7 @@ UA
 UA
 UA
 UA
-ro
+Oo
 UA
 jM
 UA
@@ -29229,7 +29245,7 @@ Yj
 WZ
 UA
 UA
-ro
+Oo
 UA
 CC
 JR
@@ -30237,7 +30253,7 @@ jM
 wY
 LO
 aF
-pz
+UO
 aF
 aF
 aA

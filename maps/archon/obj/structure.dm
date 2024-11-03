@@ -1,6 +1,8 @@
-/obj/structure/container/grey
+/obj/structure/container
 	name			= "unmarked container"
-	icon			= 'container.dmi'
+	icon			= 'maps/archon/obj/container.dmi'
+
+/obj/structure/container/grey
 	desc			= "It's a nondescript, grey, unmarked container. I wonder what's inside?"
 	icon_state		= "greyunmarked"
 	density			= TRUE
@@ -9,7 +11,6 @@
 	parts_type		= /obj/item/stack/material/strut
 
 /obj/structure/container/blue
-	name			= "unmarked container"
 	desc			= "It's a nondescript, blue, unmarked container. I wonder if there's anything inside?"
 	icon_state		= "blueunmarked"
 
@@ -20,7 +21,7 @@
 
 /obj/structure/crane
 	name			= "crane hook"
-	icon			= 'structure.dmi'
+	icon			= 'maps/archon/obj/structure.dmi'
 	desc			= "A cargo crane hook, meant for attaching to cargo containers in order to lift them."
 	icon_state		= "hook"
 	density			= FALSE

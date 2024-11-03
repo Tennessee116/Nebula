@@ -1,7 +1,9 @@
 #if !defined(USING_MAP_DATUM)
 
-	#include "areas.dm"
+	#include "area.dm"
 	#include "turf.dm"
+
+	#include "area/archon_3.dm"
 
 	#include "obj/floor_decal.dm"
 	#include "obj/structure.dm"
