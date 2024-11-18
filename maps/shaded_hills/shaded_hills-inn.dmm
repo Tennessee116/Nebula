@@ -61,10 +61,6 @@
 	unique_merge_identifier = "outer wall"
 	},
 /area/shaded_hills/outside/downlands)
-"cy" = (
-/obj/structure/reagent_dispensers/barrel/ebony/water,
-/turf/floor/wood/walnut,
-/area/shaded_hills/shrine/kitchen)
 "cT" = (
 /obj/structure/railing/mapped/wooden/walnut{
 	dir = 1
@@ -149,7 +145,7 @@
 /turf/wall/brick/basalt/shutter,
 /area/shaded_hills/slaughterhouse)
 "fK" = (
-/obj/structure/reagent_dispensers/barrel/ebony/water,
+/obj/structure/cask_rack/large/mapped,
 /turf/floor/path/herringbone/basalt,
 /area/shaded_hills/inn/kitchen)
 "fR" = (
@@ -939,10 +935,6 @@
 "By" = (
 /turf/floor/grass,
 /area/shaded_hills/outside/shrine)
-"BD" = (
-/obj/structure/reagent_dispensers/barrel/ebony/wine,
-/turf/floor/wood/walnut,
-/area/shaded_hills/shrine/kitchen)
 "BG" = (
 /obj/structure/bed/chair/bench/ebony{
 	dir = 1
@@ -1647,7 +1639,7 @@
 /turf/floor/path/herringbone/basalt,
 /area/shaded_hills/shrine)
 "VE" = (
-/obj/structure/reagent_dispensers/barrel/ebony/beer,
+/obj/structure/cask_rack/large/mapped,
 /turf/floor/wood/walnut,
 /area/shaded_hills/shrine/kitchen)
 "VM" = (
@@ -20379,9 +20371,9 @@ iK
 kv
 By
 px
-cy
+ge
 VE
-BD
+ge
 Sy
 Aq
 QB

@@ -1,7 +1,7 @@
 /obj/structure/reagent_dispensers/barrel
 	name                      = "barrel"
 	desc                      = "A stout barrel for storing large amounts of liquids or substances."
-	icon                      = 'icons/obj/structures/barrel.dmi'
+	icon                      = 'icons/obj/structures/barrels/barrel.dmi'
 	icon_state                = ICON_STATE_WORLD
 	anchored                  = TRUE
 	atom_flags                = ATOM_FLAG_CLIMBABLE
@@ -16,10 +16,19 @@
 	volume                    = 7500
 	movable_flags             = MOVABLE_FLAG_WHEELED
 	throwpass                 = TRUE
+	// Should we draw our lid and liquid contents as overlays?
+	var/show_liquid_contents  = TRUE
+	// Rivets, bands, etc. Currently just cosmetic.
+	var/decl/material/metal_material = /decl/material/solid/metal/iron
 
 /obj/structure/reagent_dispensers/barrel/Initialize()
-	..()
-	return INITIALIZE_HINT_LATELOAD
+	if(ispath(metal_material))
+		metal_material = GET_DECL(metal_material)
+	if(!istype(metal_material))
+		metal_material = null
+	. = ..()
+	if(. == INITIALIZE_HINT_NORMAL && storage)
+		return INITIALIZE_HINT_LATELOAD //  we want to grab our turf contents.
 
 /obj/structure/reagent_dispensers/barrel/attackby(obj/item/W, mob/user)
 	. = ..()
@@ -48,15 +57,29 @@
 	update_icon()
 
 /obj/structure/reagent_dispensers/barrel/on_update_icon()
+
 	. = ..()
-	if(ATOM_IS_OPEN_CONTAINER(src))
+
+	// Layer below lid/lid metal.
+	if(metal_material)
+		add_overlay(overlay_image(icon, "[icon_state]-metal", metal_material.color, RESET_COLOR))
+
+	// Add lid/reagents overlay/lid metal.
+	if(show_liquid_contents && ATOM_IS_OPEN_CONTAINER(src))
 		if(reagents)
 			var/overlay_amount = NONUNIT_CEILING(reagents.total_liquid_volume / reagents.maximum_volume * 100, 10)
 			var/image/filling_overlay = overlay_image(icon, "[icon_state]-[overlay_amount]", reagents.get_color(), RESET_COLOR | RESET_ALPHA)
 			add_overlay(filling_overlay)
 		add_overlay(overlay_image(icon, "[icon_state]-lidopen", material.color, RESET_COLOR))
+		if(metal_material)
+			add_overlay(overlay_image(icon, "[icon_state]-lidopen-metal", metal_material.color, RESET_COLOR))
 	else
 		add_overlay(overlay_image(icon, "[icon_state]-lidclosed", material.color, RESET_COLOR))
+		if(metal_material)
+			add_overlay(overlay_image(icon, "[icon_state]-lidclosed-metal", metal_material.color, RESET_COLOR))
+
+	if(istype(loc, /obj/structure/cask_rack))
+		loc.update_icon()
 
 /obj/structure/reagent_dispensers/barrel/ebony
 	material = /decl/material/solid/organic/wood/ebony
